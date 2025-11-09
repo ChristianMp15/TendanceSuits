@@ -490,7 +490,7 @@ footer {
 /* Mobile devices */
 @media (max-width: 768px) {
   .about-hero {
-    height:100vh;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     text-align: center;
