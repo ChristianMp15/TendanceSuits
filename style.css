@@ -1,0 +1,577 @@
+/* Global Style */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #2a004f;
+}
+
+/* ===== Header & Logo Styling ===== */
+header {
+  background-color: #2a004f;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.logo a {
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #800000;
+}
+
+
+nav a:hover, nav a.active {
+  color: #800000;
+}
+
+/* Hero / About */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: 
+    linear-gradient(to right, rgba(42, 0, 79, 0.45), rgba(42, 0, 79, 0.15)),
+    url('images/Event8.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Push content to the left */
+  color: white;
+  overflow: hidden;
+}
+
+
+.about-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 0, 79, 0.55); /* semi-transparent dark purple overlay */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 3rem 6rem;
+}
+
+.about-text {
+  max-width: 550px;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-text h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin: 0.8rem 0;
+  color: #f2f2f2;
+  font-size: 1.05rem;
+}
+
+.about-text strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.about-text .motto {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .about-hero {
+    height: auto;
+  }
+
+  .about-hero .overlay {
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Social Media Links */
+.socials a {
+  color: #2a004f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  color: #800000;
+}
+
+/* Gallery */
+.gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gallery h1 {
+  color: #800000;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid .item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.gallery-grid .item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallery-grid h3 {
+  background-color: #2a004f;
+  color: white;
+  margin: 0;
+  padding: 0.8rem;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  background-color: #800000;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #2a004f;
+}
+/* ===== WhatsApp Contact Button ===== */
+.whatsapp-contact {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc57;
+}
+/* ===== SERVICES PAGE STYLING ===== */
+
+/* Video Hero Section */
+.services-hero {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-overlay {
+  background: rgba(42, 0, 79, 0.55);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+}
+
+.video-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  color: #f8dcdc;
+}
+
+/* Services List Section */
+.services-list {
+  background-color: #fff;
+  color: #2a004f;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.services-list .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-list h2 {
+  text-align: center;
+  color: #800000;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.services-list strong {
+  color: #800000;
+}
+
+/* ===== Responsive Design ===== */
+
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 70vh;
+  }
+
+  .video-overlay {
+    padding: 1.5rem;
+  }
+
+  .video-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .video-overlay p {
+    font-size: 1rem;
+  }
+
+  .services-list {
+    padding: 2rem 1rem;
+  }
+
+  .services-list h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-list li {
+    font-size: 1rem;
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #2a004f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+/* Events Page */
+/* ===== Event Section ===== */
+/* ========== EVENTS PAGE STYLING ========== */
+.events {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.events h1 {
+  color: #800000; /* Tendance dark purple */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.events p {
+  color: #2a004f;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Grid layout for event items */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Individual event cards */
+.event-item {
+  background-color: #2a004f; /* purple background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(42, 0, 79, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 380px;
+}
+
+.event-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(42, 0, 79, 0.4);
+}
+
+/* Adjust image to show more faces */
+.event-item img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center 25%; /* moves focus slightly down */
+  border-bottom: 3px solid #6b1e3b; /* maroon accent line */
+}
+
+/* Caption styling */
+.caption {
+  padding: 1.5rem;
+  color: #fff;
+  text-align: left;
+}
+
+.caption h3 {
+  color: #cbb0df; /* soft lavender/purple accent */
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.caption p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Final paragraph at bottom of page */
+.events > p:last-of-type {
+  color: #2a004f;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .events {
+    padding: 3rem 1rem;
+  }
+
+  .event-item img {
+    height: 250px;
+    object-position: center 30%; /* show faces better on mobile */
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN — MOBILE & TABLET
+   =========================== */
+
+/* Tablets (landscape and portrait) */
+@media (max-width: 1024px) {
+  .about-hero {
+    height: auto;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  .about-hero .overlay {
+    padding: 2.5rem 3rem;
+  }
+
+  .about-text {
+    max-width: 90%;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-hero {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: 
+      linear-gradient(to bottom, rgba(42, 0, 79, 0.5), rgba(42, 0, 79, 0.2)),
+      url('images/Event8.jpeg') no-repeat center center/cover;
+  }
+
+  .about-hero .overlay {
+    background: rgba(42, 0, 79, 0.5); /* softer overlay on phones */
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f4f4f4;
+  }
+
+  .about-text .motto {
+    font-size: 1.1rem;
+    color: #f9d9d9;
+  }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-text .motto {
+    font-size: 1rem;
+  }
+
+  .about-hero .overlay {
+    padding: 1.5rem;
+  }
+}
+footer {
+  background-color: #2a004f; /* dark purple tone */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 0.8rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a img {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Pop-up effect only */
+.social-icons a:hover img {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
