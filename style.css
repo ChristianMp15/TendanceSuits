@@ -465,7 +465,7 @@ footer {
 /* Tablets (landscape and portrait) */
 @media (max-width: 1024px) {
   .about-hero {
-    height: auto;
+    height: 100vh;
     background-position: center top;
     background-attachment: scroll;
   }
@@ -487,45 +487,47 @@ footer {
   }
 }
 
-/* Mobile devices */
-@media (max-width: 768px) {
-  .about-hero {
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 1.5rem;
-    background: 
-      linear-gradient(to bottom, rgba(42, 0, 79, 0.5), rgba(42, 0, 79, 0.2)),
-      url('images/Event8.jpeg') no-repeat center center/cover;
-  }
+.mobile-nav {
+  position: relative;
+}
 
-  .about-hero .overlay {
-    background: rgba(42, 0, 79, 0.5); /* softer overlay on phones */
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  margin: 1rem;
+}
 
-  .about-text {
-    max-width: 100%;
-    padding: 1rem;
-  }
+.hamburger span {
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+}
 
-  .about-text h1 {
-    font-size: 1.8rem;
-  }
+.menu {
+  display: none;
+  flex-direction: column;
+  background: #3c1053;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
 
-  .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #f4f4f4;
-  }
+.menu li {
+  list-style: none;
+  margin: 10px 0;
+}
 
-  .about-text .motto {
-    font-size: 1.1rem;
-    color: #f9d9d9;
-  }
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 /* Small phones (under 480px) */
@@ -533,9 +535,14 @@ footer {
   .about-text h1 {
     font-size: 1.5rem;
   }
-
+  .about-hero {
+  position: relative;
+  overflow: visible;}
+.about-text {
+  padding-top: 80px; /* Adjust as needed */
+  }
   .about-text p {
-    font-size: 0.9rem;
+    margin-top: 40px;
   }
 
   .about-text .motto {
@@ -574,4 +581,96 @@ footer p {
 .social-icons a:hover img {
   transform: scale(1.2);
   opacity: 0.9;
+}
+/* Base styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #3c1053;
+  color: white;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #3c1053;
+    padding: 1rem;
+  }
+  .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  z-index: 1001;
+}
+
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  background: #3c1053;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.menu.active {
+  display: flex;
 }
