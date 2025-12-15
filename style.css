@@ -601,23 +601,24 @@ header {
 
 /* Hamburger styles */
 .hamburger {
+  display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 30px;
-  height: 25px;
+  height: 26px; /* ✅ enough space for 4 spans */
   cursor: pointer;
 }
-
 .hamburger span {
   height: 3px;
   background: white;
-  margin: 3px 0;
   border-radius: 2px;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    
+  .hamburger {
+    display: flex;
+  } 
   .nav-links {
     display: none;
     flex-direction: column;
@@ -641,9 +642,6 @@ header {
     display: flex;
   }
 
-  .hamburger {
-    display: flex;
-  }
 }
 @media (max-width: 768px) {
   .desktop-nav {
