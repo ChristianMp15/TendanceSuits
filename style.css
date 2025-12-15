@@ -57,14 +57,12 @@ nav a:hover, nav a.active {
     linear-gradient(to right, rgba(42, 0, 79, 0.45), rgba(42, 0, 79, 0.15)),
     url('images/Event8.jpeg') no-repeat center center / cover;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
   color: white;
   overflow: hidden;
-  z-index: 1; /* ✅ added */
+  z-index: 1;
 }
-
-
 
 .about-hero .overlay {
   pointer-events: none;
@@ -75,6 +73,7 @@ nav a:hover, nav a.active {
   max-width: 550px;
   z-index: 2;
   animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
 }
 
 .about-text h1 {
@@ -602,7 +601,6 @@ header {
 
 /* Hamburger styles */
 .hamburger {
-  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
