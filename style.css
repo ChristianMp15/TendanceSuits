@@ -636,7 +636,9 @@ header {
   font-size: 1.2rem;
   z-index: 1001;
 }
-
+.about-text {
+    padding: 1 1rem;
+  }
 
   .nav-links.show {
     display: flex;
